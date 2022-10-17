@@ -65,7 +65,6 @@ class CartController extends Controller
                     ->first();
 
                 $size = collect($size);
-
                 $stock = collect($stock);
                 $baris = collect($row);
                 $gabung = $baris->merge($stock);
@@ -193,7 +192,7 @@ class CartController extends Controller
 
     public function tampilcheckout($id)
     {
-        // 
+        //
     }
 
     /**
@@ -300,7 +299,7 @@ class CartController extends Controller
             array_push($arr, $gabung);
         }
 
-        $arr = json_decode(json_encode($arr,true));
+        $arr = json_decode(json_encode($arr, true));
 
         // dd(
         //     $arr
